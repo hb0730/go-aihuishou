@@ -15,7 +15,7 @@ type BaseModel struct {
 }
 
 var file *os.File
-var htmlUrl []*aihuishou.HtmlUrl
+var htmlUrl []aihuishou.HtmlUrl
 
 func main() {
 	//创建excel文件
@@ -25,10 +25,10 @@ func main() {
 	}
 	file = f
 	defer f.Close()
-	htmlUrl = make([]*aihuishou.HtmlUrl, 3)
-	htmlUrl[0] = &aihuishou.HtmlUrl{Url: "https://www.aihuishou.com/", Type: "shouji", Page: 135}
-	htmlUrl[1] = &aihuishou.HtmlUrl{Url: "https://www.aihuishou.com/", Type: "pingban", Page: 35}
-	htmlUrl[2] = &aihuishou.HtmlUrl{Url: "https://www.aihuishou.com/", Type: "laptop", Page: 313}
+	htmlUrl = make([]aihuishou.HtmlUrl, 3)
+	htmlUrl[0] = aihuishou.HtmlUrl{Url: "https://www.aihuishou.com/", Type: "shouji", Page: 135}
+	htmlUrl[1] = aihuishou.HtmlUrl{Url: "https://www.aihuishou.com/", Type: "pingban", Page: 35}
+	htmlUrl[2] = aihuishou.HtmlUrl{Url: "https://www.aihuishou.com/", Type: "laptop", Page: 313}
 	write()
 
 }

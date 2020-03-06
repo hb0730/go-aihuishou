@@ -43,7 +43,7 @@ func getHtml(url string) string {
 	}
 	return string(body)
 }
-func ToGo(url *HtmlUrl) *list.List {
+func ToGo(url HtmlUrl) *list.List {
 	length := url.Page
 	if length <= 0 {
 		return nil
